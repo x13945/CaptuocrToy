@@ -231,7 +231,6 @@
 				525274401FCF9CB900C6EC4D /* Frameworks */,
 				525274411FCF9CB900C6EC4D /* Resources */,
 				74D2D50A595413134D10F079 /* [CP] Embed Pods Frameworks */,
-				E1A9AE1E45938CB9646A5B0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,7 +319,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Captuocr/Pods-Captuocr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
 				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
@@ -345,22 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1A9AE1E45938CB9646A5B0B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Captuocr/Pods-Captuocr-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -524,12 +508,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD7B71F3A0D7272EDD3F25FF /* Pods-Captuocr.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Captuocr/Captuocr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 23PC25S4QM;
+				EXCLUDED_ARCHS = x86_64;
 				INFOPLIST_FILE = Captuocr/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Captuocr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Gragrance.Captuocr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -540,12 +530,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 813B363FAD1FED60BE46C163 /* Pods-Captuocr.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Captuocr/Captuocr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 23PC25S4QM;
+				EXCLUDED_ARCHS = x86_64;
 				INFOPLIST_FILE = Captuocr/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Captuocr;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Gragrance.Captuocr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
