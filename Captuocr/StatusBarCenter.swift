@@ -157,6 +157,7 @@ class StatusBarCenter {
                     record.txt = final
                     record.imgBase64 = base64
                     record.type = .ocr
+                    Utils.writeToPasteboard(final)
                     self.historyCenter.addRecord(record: record)
                 } catch {
                     print(error)
@@ -191,6 +192,7 @@ class StatusBarCenter {
             record.txt = qrtext
             record.imgBase64 = base64
             record.type = .qrcode
+            Utils.writeToPasteboard(qrtext)
             self.historyCenter.addRecord(record: record)
             
             self.recognizeVc.viewmodel.image.value = base64

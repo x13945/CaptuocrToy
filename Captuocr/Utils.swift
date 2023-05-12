@@ -12,6 +12,12 @@ import Cocoa
 
 
 class Utils {
+    static func writeToPasteboard(_ text: String) {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents() // 清空粘贴板内容
+        pasteboard.writeObjects([text as NSString]) // 将文本写入粘贴板
+    }
+    
     static func hasScreenCapturePermission() -> Bool {
         let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true]
         return AXIsProcessTrustedWithOptions(options as CFDictionary)
